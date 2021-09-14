@@ -1,5 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import pymsql
 
 lista_universidades = pd.read_csv('lista_universidades_2021.csv')
 lista_universidades = lista_universidades.rename(columns={'Sigla': 'sigla', 'Instituição(IES)': 'instituicao'})
