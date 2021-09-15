@@ -18,7 +18,7 @@ dbConnection = sqlEngine.connect()
 
 try:
     frame = dataFrame.to_sql(tableName, dbConnection, if_exists='replace')
-    sqlEngine.execute('ALTER TABLE `university` ADD id int NOT NULL AUTO_INCREMENT primary key')
+    sqlEngine.execute('ALTER TABLE `university` ADD id bigint NOT NULL AUTO_INCREMENT primary key')
 
 except ValueError as vx:
     print(vx)
