@@ -1,9 +1,9 @@
 import pandas as pd
 from sqlalchemy import create_engine
-import pymsql
+# import pymsql
 
 lista_universidades = pd.read_csv('lista_universidades_2021.csv')
-lista_universidades = lista_universidades.rename(columns={'Sigla': 'sigla', 'Instituição(IES)': 'instituicao'})
+lista_universidades = lista_universidades.rename(columns={'Sigla': 'initials', 'Instituição(IES)': 'institution'})
 lista_universidades = lista_universidades.drop(columns=['Código Mantenedora', 'Situação da IES', 'Razão Social', 'Telefone', 'e-Mail', 'Município', 'UF',
                                                         'CNPJ', 'Sinalizações Vigentes', 'Representante Legal', 'Natureza Jurídica', 'Código IES',
                                                         'Reitor/Dirigente Principal', 'IGC', 'Ano IGC', 'Ano CI-EaD', 'Ano CI', 'CI-EaD', 'CI',
